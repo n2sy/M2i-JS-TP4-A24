@@ -38,3 +38,16 @@ btnCheck.addEventListener("click", () => {
     }
   }
 });
+
+document.getElementById("btn-again").addEventListener("click", () => {
+  score = 20;
+  secretNumber = Math.trunc(Math.random() * 20) + 1;
+  console.log(secretNumber);
+  afficherMessage("Start guessing...");
+  document.body.style.backgroundColor = "#222";
+  document.querySelector(".number").style.width = "15rem";
+  document.querySelector(".number").textContent = "?";
+  document.querySelector(".score").textContent = score;
+  inpGuess.value = "";
+  btnCheck.disabled = false;
+});
